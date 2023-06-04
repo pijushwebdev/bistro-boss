@@ -18,8 +18,8 @@ const Dashboard = () => {
             <div className="drawer drawer-mobile">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content scroll-hide flex flex-col">
-                    <Outlet></Outlet>
                     <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
+                    <Outlet></Outlet>
 
                 </div>
                 <div className="drawer-side bg-[#D1A054] m-0">
@@ -36,7 +36,7 @@ const Dashboard = () => {
                             </> : <>
                                 <li><NavLink to='/dashboard/userHome'><FaHome /> User Home</NavLink></li>
                                 <li><NavLink to='/dashboard/reservation'><FaCalendar /> Reservation</NavLink></li>
-                                <li><NavLink to='/dashboard/payment'><FaWallet /> Payment</NavLink></li>
+                                <li><NavLink to='/dashboard/paymentHistory'><FaWallet /> Payment History</NavLink></li>
                                 <li><NavLink to='/dashboard/myCart'><FaShoppingCart /> My Cart <span className="badge badge-secondary ml-1">+{cart?.length || 0}</span></NavLink></li>
                                 <li><NavLink to='/dashboard/review'><FaShoppingCart /> Add Review</NavLink></li>
                                 <li><NavLink to='/dashboard/booking'><RiCalendarEventFill /> My Booking</NavLink></li>

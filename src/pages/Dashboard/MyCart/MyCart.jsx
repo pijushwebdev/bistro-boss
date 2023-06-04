@@ -3,6 +3,7 @@ import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 import useCart from "../../../hooks/useCart";
 import { FaTrashAlt } from "react-icons/fa";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 
 const MyCart = () => {
@@ -53,7 +54,7 @@ const MyCart = () => {
             <div className="flex justify-around font-semibold h-32 uppercase items-center">
                 <h2 className="text-3xl">Total Order: {cart.length}</h2>
                 <h2 className="text-3xl">Total Price: ${totalPrice}</h2>
-                <button className="py-1 px-3 rounded-md text-white text-lg bg-[#D1A054]">Pay</button>
+                <Link to='/dashboard/payment' className="py-1 px-3 rounded-md text-center text-white text-lg bg-[#D1A054]">Pay</Link>
             </div>
 
             <div className="overflow-x-auto scroll-hide w-full">

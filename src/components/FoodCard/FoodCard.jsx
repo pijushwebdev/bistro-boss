@@ -16,7 +16,9 @@ const FoodCard = ({item}) => {
 
     const handleAddToCart = () => {
         if(user && user.email){
+            
             const cartItem = {foodId:_id,name,image,price,recipe, email: user.email,}
+
             fetch('http://localhost:5000/carts',{
                 method:'POST',
                 headers:{
